@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    align-items: center;   /* vertical centering */
+    justify-content: center; /* horizontal centering */
+    height: 100vh;         /* full viewport height */
+    margin: 0;
+    background: #f9f9fa;   /* gray backdrop */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+}
+
+.app-card {
+  width: 90%;
+  height: 90%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  overflow: hidden;
+  display: flex;            /* split into columns */
+}
+
+.sidebar,
+.list,
+.editor {
+  min-width: 0;
+  height: 100%;
+  overflow-y: auto;
+  padding: 16px;
+  background: #fff;
+}
+
+.sidebar {
+    flex: 0 0 15%;            /* 20% width */
+    border-right: 1px solid #c5c9d1;
+    display: block;        /* ensure each is on its own line (default for div) */
+    margin-bottom: 12px;   /* add spacing between items */
+    font-size: 16px;       /* adjust size */
+}
+
+.list {
+  flex: 0 0 30%;            /* 30% width */
+  border-right: 1px solid #c5c9d1;
+}
+
+.editor {
+  flex: 0 0 55%;            /* 50% width */
+}
+
+.sidebar > * {
+  display: block;      /* each child is its own line */
+  margin-bottom: 12px; /* spacing between items */
+}
+
+#title{
+    font-weight: bold;   /* makes text bold */
+    font-size: 2rem;
+}
+
+#subtitle{
+    font-weight: bold;   /* makes text bold */
+    font-size: 1rem;
+}
+

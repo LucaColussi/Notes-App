@@ -13,6 +13,10 @@ def save_notes(note):
     with open("notes.json", "w", encoding="utf-8") as f:
         json.dump(note, f, ensure_ascii=False, indent=2)
 
+@app.route("/notes", methods=["GET"])
+def get_todos():
+    return jsonify(load_notes())
+
 
 if __name__ == "__main__":
     app.run(debug=True)
