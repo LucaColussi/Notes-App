@@ -1,33 +1,32 @@
 [
-    {
-        "id": 123,
-        "title": " impostor",
-        "body": "amougs",
-        "category": "suspect"
-    },
-    {
-        "id": 1243,
-        "title": " impostor",
-        "body": "amougs",
-        "category": "suspect"
-    },
-        {
-        "id": 1253,
-        "title": " impostor",
-        "body": "amougs",
-        "category": "sium"
-    },
-        {
-        "id": 1263,
-        "title": " impostor",
-        "body": "amougs",
-        "category": "sium"
-    },
-        {
-        "id": 1273,
-        "title": " impostor",
-        "body": "amougs",
-        "category": "vadigo"
-    }
-    
+  {
+    "id": 1,
+    "title": "Studiare Flask",
+    "body": "Ripassare le basi di Flask e creare una semplice API.",
+    "category": "studio"
+  },
+  {
+    "id": 2,
+    "title": "Fare la spesa",
+    "body": "Comprare pane, latte e frutta.",
+    "category": "personale"
+  },
+  {
+    "id": 3,
+    "title": "Allenamento",
+    "body": "Sessione di corsa di 30 minuti al parco.",
+    "category": "salute"
+  },
+  {
+    "id": 4,
+    "title": "Progetto universitario",
+    "body": "Lavorare alla relazione per il corso di Basi di Dati.",
+    "category": "studio"
+  },
+  {
+    "id": 5,
+    "title": "Chiamare Marco",
+    "body": "Organizzare la cena di venerdì sera.",
+    "category": "sociale"
+  }
 ]
