@@ -4,17 +4,32 @@ async function load_categories_notes(){
     console.log(data);
     const body = document.getElementById("categories")
     body.innerHTML = "";
+    const allNotes = document.createElement("div");
+    allNotes.textContent = "All Notes";
+    allNotes.style.cursor = "pointer";  // show hand cursor
+    allNotes.className = "category"
+    body.appendChild(allNotes);
+    allNotes.addEventListener("click", () =>  {
+        // Remove active class from all categories
+        document.querySelectorAll('.category').forEach(cat => cat.classList.remove('active'));
+        // Add active class to clicked category
+        allNotes.classList.add('active');
+        load_notes();
+    });
     data.forEach((note) =>{ // get category
         const div = document.createElement("div");
-        div.textContent = "Click me";
         div.style.cursor = "pointer";  // show hand cursor
         div.className = "category"
         div.addEventListener("click", () => {
+            // Remove active class from all categories
+            document.querySelectorAll('.category').forEach(cat => cat.classList.remove('active'));
+            // Add active class to clicked category
+            div.classList.add('active');
             load_notes_by_categories(note)
         });
         div.textContent = note.category;
         body.appendChild(div);
-    })
+    }) 
 }
 
 async function load_notes(){
