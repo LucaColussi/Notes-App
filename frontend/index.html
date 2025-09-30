@@ -8,19 +8,26 @@
 </head>
 <body>
     <div class="app-card">
-        <div class="sidebar">
+        <div id="sidebar">
             <div class="title">Notes</div>
             <div id="categories"></div>
         </div>
         <div id="list">
-            <div class="search-container">
-                <input type="text" placeholder="🔍 Search...">
+            <div class="search-add-note">
+                <div class="search-container">
+                    <input type="text" placeholder="🔍 Search...">
+                </div>
+                <div>
+                    <button onclick="addNote()">+ Add note</button>
+                </div>
+                
             </div>
+            
             <div id="notes-container">
 
             </div>
         </div>
-        <div class="editor">
+        <div id="editor">
             <div class="editor-placeholder">
                 <div class="placeholder-emoji">📝</div>
                 <div class="placeholder-text">Clicca su una nota per modificarla</div>

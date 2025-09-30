@@ -3,90 +3,90 @@
     "id": 1,
     "title": "Studiare Flask",
     "body": "Ripassare le basi di Flask e creare una semplice API.",
-    "category": "studio"
+    "category": "Studio"
   },
   {
     "id": 2,
     "title": "Fare la spesa",
     "body": "Comprare pane, latte, frutta e pasta.",
-    "category": "personale"
+    "category": "Personale"
   },
   {
     "id": 3,
     "title": "Allenamento",
     "body": "Sessione di corsa di 30 minuti al parco.",
-    "category": "salute"
+    "category": "Salute"
   },
   {
     "id": 4,
     "title": "Progetto universitario",
     "body": "Lavorare alla relazione per il corso di Basi di Dati.",
-    "category": "studio"
+    "category": "Studio"
   },
   {
     "id": 5,
     "title": "Chiamare Marco",
     "body": "Organizzare la cena di venerdì sera.",
-    "category": "sociale"
+    "category": "Sociale"
   },
   {
     "id": 6,
     "title": "Pulizie di casa",
-    "body": "Passare l’aspirapolvere e lavare i pavimenti.",
-    "category": "personale"
+    "body": "Passare l'aspirapolvere e lavare i pavimenti.",
+    "category": "Personale"
   },
   {
     "id": 7,
     "title": "Leggere un libro",
     "body": "Finire il capitolo 5 di 'Il nome della rosa'.",
-    "category": "tempo libero"
+    "category": "Tempo libero"
   },
   {
     "id": 8,
     "title": "Meeting con il team",
-    "body": "Aggiornare tutti sull’avanzamento del progetto.",
-    "category": "lavoro"
+    "body": "Aggiornare tutti sull'avanzamento del progetto.",
+    "category": "Lavoro"
   },
   {
     "id": 9,
     "title": "Pagare le bollette",
     "body": "Luce, acqua e internet entro la fine del mese.",
-    "category": "personale"
+    "category": "Personale"
   },
   {
     "id": 10,
     "title": "Studiare JavaScript",
     "body": "Approfondire async/await e fetch API.",
-    "category": "studio"
+    "category": "Studio"
   },
   {
     "id": 11,
     "title": "Andare in palestra",
     "body": "Allenamento braccia e petto.",
-    "category": "salute"
+    "category": "Salute"
   },
   {
     "id": 12,
     "title": "Scrivere sul diario",
     "body": "Annotare riflessioni sulla giornata.",
-    "category": "tempo libero"
+    "category": "Tempo libero"
   },
   {
     "id": 13,
     "title": "Fare backup",
     "body": "Salvare i documenti importanti su hard disk esterno.",
-    "category": "lavoro"
+    "category": "Lavoro"
   },
   {
     "id": 14,
     "title": "Telefonare ai genitori",
     "body": "Sentire come stanno e aggiornare sui progressi universitari.",
-    "category": "sociale"
+    "category": "Sociale"
   },
   {
     "id": 15,
     "title": "Preparare presentazione",
-    "body": "Creare slide per l’esame orale di Informatica.",
-    "category": "studio"
+    "body": "Creare slide per l'esame orale di Informatica.",
+    "category": "Studio"
   }
 ]

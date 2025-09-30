@@ -7,7 +7,8 @@ async function load_categories_notes(){
     const allNotes = document.createElement("div");
     allNotes.textContent = "All Notes";
     allNotes.style.cursor = "pointer";  // show hand cursor
-    allNotes.className = "category"
+    allNotes.className = "category";
+    allNotes.classList.add('active');   
     body.appendChild(allNotes);
     allNotes.addEventListener("click", () =>  {
         // Remove active class from all categories
@@ -73,8 +74,43 @@ async function load_notes_by_categories(note){
             div.appendChild(text);        
             body.appendChild(div);
         })
+}
 
+function addNote(){
+    const list = document.getElementById("list");
+    const editor = document.getElementById("editor");
+    editor.innerHTML = "";
+    list.style.display = "none";  // Hide the right sidebar
+    const textArea = document.createElement("input");
+    textArea.placeholder = "body";
+    const title = document.createElement("input");
+    title.placeholder = "title";
+    const category = document.createElement("input")
+    category.placeholder = "category";
+    const saveText = document.createElement("button");
+    saveText.textContent = "save";
+    editor.appendChild(title);
+    editor.appendChild(category);
+    editor.appendChild(textArea);
+    editor.appendChild(saveText);
+    saveText.addEventListener("click", () =>{
+        
+        const titleValue = title.value;
+        const categoryValue = category.value;
+        const bodyValue = textArea.value;
+        
+        const body = JSON.stringify({ title: titleValue, category: categoryValue, body: bodyValue });
+        fetch("http://127.0.0.1:5000/notes", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body
+        })
+        .then( () => load_categories_notes());
 
+    })
+    
 }
 document.addEventListener("DOMContentLoaded", () => {
   load_notes();

@@ -1,3 +1,4 @@
+import uuid
 from flask import Flask, jsonify, request, json
 from flask_cors import CORS
 
@@ -39,6 +40,21 @@ def get_notes_by_category(category):
         if category == n["category"]:
             result.append(n)
     return jsonify(result)
+
+@app.route("/notes", methods=["POST"])
+def add_note():
+    data = request.get_json() # prendo json inviato dal frontend
+    notes = load_notes()
+    new_note = {
+        "id": str(uuid.uuid4()),
+        "title": data["title"],
+        "body": data["body"],
+        "category": data["category"]
+    }
+    notes.append(new_note);
+    save_notes(notes)
+    return jsonify(new_note), 201
+
 
 if __name__ == "__main__":
     app.run(debug=True)
