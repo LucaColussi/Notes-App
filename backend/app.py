@@ -32,7 +32,7 @@ def isCategoryPresent(n, result):
             return True
     return False
 
-@app.route("/notes/<category>", methods=["GET"])
+@app.route("/notes/category/<category>", methods=["GET"])
 def get_notes_by_category(category):
     notes = load_notes()    # devo aggiungere in result quando n == category
     result = [];
@@ -54,6 +54,16 @@ def add_note():
     notes.append(new_note);
     save_notes(notes)
     return jsonify(new_note), 201
+
+@app.route("/notes/id/<int:note_id>", methods=["GET"])
+def get_single_note(note_id):
+    notes = load_notes();
+    for n in notes:
+        if n["id"] == note_id:
+            print(n);
+            return jsonify(n), 200
+
+    return jsonify({"error": "nota non trovata"}), 404
 
 
 if __name__ == "__main__":

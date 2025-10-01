@@ -39,41 +39,47 @@ async function load_notes(){
     const body = document.getElementById("notes-container")
     body.innerHTML = "";  // Clear only the notes, not the search
     data.forEach((note) =>{ 
-        const div = document.createElement("div");
-        div.className = "note"
-        const title = document.createElement("p");
-        title.textContent = note.title;
-
-        const text = document.createElement("p");
-        text.textContent = note.body;
-
-        title.className = "title";
-        div.appendChild(title);
-        div.appendChild(text);
-        
-        body.appendChild(div);
+        createSection(body, note);
     })
 }
+
 async function load_notes_by_categories(note){
-        const res = await fetch(`http://127.0.0.1:5000/notes/${note.category}`);
+        const res = await fetch(`http://127.0.0.1:5000/notes/category/${note.category}`);
         const data = await res.json();
         const body = document.getElementById("notes-container")
         body.innerHTML = "";  // Clear only the notes, not the search
         data.forEach((note) =>{ 
-            const div = document.createElement("div");
-            div.className = "note"
-
-            const title = document.createElement("p");
-            title.textContent = note.title;
-
-            const text = document.createElement("p");
-            text.textContent = note.body;
-
-            title.className = "title";
-            div.appendChild(title);
-            div.appendChild(text);        
-            body.appendChild(div);
+            createSection(body, note);
         })
+}
+function createSection(body, note){
+        const div = document.createElement("div");
+        div.className = "note";
+        div.style.cursor = "pointer";
+
+        const title = document.createElement("p");
+        title.textContent = note.title;
+        title.className = "title";
+
+        const text = document.createElement("p");
+        text.textContent = note.body;
+        div.addEventListener("click", () =>  {
+            load_note_body(note);
+        });
+        div.appendChild(title);
+        div.appendChild(text);        
+        body.appendChild(div);
+}
+
+async function load_note_body(note){
+    const res = await fetch(`http://127.0.0.1:5000/notes/id/${note.id}`);
+    const data = await res.json();
+    const body = document.getElementById("editor")
+    body.innerHTML = "";
+    console.log(data);  
+    const div = document.createElement("div");
+    div.textContent = data.body;
+    body.appendChild(div);
 }
 
 function addNote(){
