@@ -1,92 +1,38 @@
 [
   {
-    "id": 1,
-    "title": "Studiare Flask",
-    "body": "Ripassare le basi di Flask e creare una semplice API.",
-    "category": "Studio"
+    "body": "digheldigheldigheldigheldigheldigheldigheldigheldigheldigheldigheldigheldigheldigheldigheldigheldigheldigheldigheldigheldigheldigheldigheldighel.\nAmong us del vadigo del dighel",
+    "category": "moga",
+    "id": "49bd9590-296b-4fc0-8f46-eec294decbc6",
+    "title": "sium"
   },
   {
-    "id": 2,
-    "title": "Fare la spesa",
-    "body": "Comprare pane, latte, frutta e pasta.",
-    "category": "Personale"
+    "body": "d",
+    "category": "dsad",
+    "id": "d609086c-ff3e-4eb9-a605-23282c750af0",
+    "title": "dsadasd"
   },
   {
-    "id": 3,
-    "title": "Allenamento",
-    "body": "Sessione di corsa di 30 minuti al parco.",
-    "category": "Salute"
+    "body": "dsadasdsadsaasdsadasd",
+    "category": "moga",
+    "id": "5d981616-5739-4dda-a618-e2637cd24cc1",
+    "title": "sayigd"
   },
   {
-    "id": 4,
-    "title": "Progetto universitario",
-    "body": "Lavorare alla relazione per il corso di Basi di Dati.",
-    "category": "Studio"
+    "body": "dsaAMOGNUS",
+    "category": "Moga",
+    "id": "c9a96c7d-d3e8-443c-93fd-430e0174fdaa",
+    "title": "dsadsa"
   },
   {
-    "id": 5,
-    "title": "Chiamare Marco",
-    "body": "Organizzare la cena di venerdì sera.",
-    "category": "Sociale"
+    "body": "dsa",
+    "category": "dsa",
+    "id": "33f75304-eb44-437c-986f-f8281d9eef48",
+    "title": "dsa"
   },
   {
-    "id": 6,
-    "title": "Pulizie di casa",
-    "body": "Passare l'aspirapolvere e lavare i pavimenti.",
-    "category": "Personale"
-  },
-  {
-    "id": 7,
-    "title": "Leggere un libro",
-    "body": "Finire il capitolo 5 di 'Il nome della rosa'.",
-    "category": "Tempo libero"
-  },
-  {
-    "id": 8,
-    "title": "Meeting con il team",
-    "body": "Aggiornare tutti sull'avanzamento del progetto.",
-    "category": "Lavoro"
-  },
-  {
-    "id": 9,
-    "title": "Pagare le bollette",
-    "body": "Luce, acqua e internet entro la fine del mese.",
-    "category": "Personale"
-  },
-  {
-    "id": 10,
-    "title": "Studiare JavaScript",
-    "body": "Approfondire async/await e fetch API.",
-    "category": "Studio"
-  },
-  {
-    "id": 11,
-    "title": "Andare in palestra",
-    "body": "Allenamento braccia e petto.",
-    "category": "Salute"
-  },
-  {
-    "id": 12,
-    "title": "Scrivere sul diario",
-    "body": "Annotare riflessioni sulla giornata.",
-    "category": "Tempo libero"
-  },
-  {
-    "id": 13,
-    "title": "Fare backup",
-    "body": "Salvare i documenti importanti su hard disk esterno.",
-    "category": "Lavoro"
-  },
-  {
-    "id": 14,
-    "title": "Telefonare ai genitori",
-    "body": "Sentire come stanno e aggiornare sui progressi universitari.",
-    "category": "Sociale"
-  },
-  {
-    "id": 15,
-    "title": "Preparare presentazione",
-    "body": "Creare slide per l'esame orale di Informatica.",
-    "category": "Studio"
+    "body": "siummete",
+    "category": "dsdad",
+    "id": "060c7e01-8717-4fbc-a846-8e07958306f8",
+    "title": "sdads"
   }
 ]

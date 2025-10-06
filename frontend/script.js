@@ -43,7 +43,7 @@ async function load_notes(){
     })
 }
 
-async function load_notes_by_categories(note){
+async function load_notes_by_categories(note){   
         const res = await fetch(`http://127.0.0.1:5000/notes/category/${note.category}`);
         const data = await res.json();
         const body = document.getElementById("notes-container")
@@ -72,14 +72,31 @@ function createSection(body, note){
 }
 
 async function load_note_body(note){
-    const res = await fetch(`http://127.0.0.1:5000/notes/id/${note.id}`);
-    const data = await res.json();
+    const saveButton = document.createElement("button");
+    saveButton.textContent = "save";
+    saveButton.className = "saveButton";
     const body = document.getElementById("editor")
     body.innerHTML = "";
-    console.log(data);  
-    const div = document.createElement("div");
-    div.textContent = data.body;
-    body.appendChild(div);
+    console.log(note);  
+    const textarea = document.createElement("textarea");
+    textarea.className = "note-body-input";
+    textarea.value = note.body;
+    const title = document.createElement("div")
+    title.textContent =  note.title;
+    title.className = "title";
+    saveButton.addEventListener("click", () =>{
+        const body = JSON.stringify({ body: textarea.value, id: note.id });
+        fetch("http://127.0.0.1:5000/notes/editor", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body
+        })
+    });
+    body.appendChild(saveButton);
+    body.appendChild(title);
+    body.appendChild(textarea);
 }
 
 function addNote(){
@@ -95,10 +112,17 @@ function addNote(){
     category.placeholder = "category";
     const saveText = document.createElement("button");
     saveText.textContent = "save";
+    const cancel = document.createElement("button");
+    cancel.textContent = "cancel";
+
     editor.appendChild(title);
     editor.appendChild(category);
     editor.appendChild(textArea);
     editor.appendChild(saveText);
+    editor.appendChild(cancel);
+    cancel.addEventListener("click", () =>{
+        location.reload();  
+    });
     saveText.addEventListener("click", () =>{
         
         const titleValue = title.value;
@@ -114,10 +138,9 @@ function addNote(){
         body
         })
         .then( () => load_categories_notes());
-
     })
-    
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   load_notes();
   load_categories_notes();

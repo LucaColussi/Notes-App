@@ -28,7 +28,7 @@ def get_notes_categories():
 
 def isCategoryPresent(n, result):
     for tmp in result:
-        if tmp["category"] == n:
+        if tmp["category"].upper() == n.upper():
             return True
     return False
 
@@ -37,7 +37,7 @@ def get_notes_by_category(category):
     notes = load_notes()    # devo aggiungere in result quando n == category
     result = [];
     for n in notes:
-        if category == n["category"]:
+        if category.upper() == n["category"].upper():
             result.append(n)
     return jsonify(result)
 
@@ -55,16 +55,15 @@ def add_note():
     save_notes(notes)
     return jsonify(new_note), 201
 
-@app.route("/notes/id/<int:note_id>", methods=["GET"])
-def get_single_note(note_id):
-    notes = load_notes();
+@app.route("/notes/editor", methods=["POST"])
+def modify_note():
+    data = request.get_json() # prendo json inviato dal frontend
+    notes = load_notes()
     for n in notes:
-        if n["id"] == note_id:
-            print(n);
-            return jsonify(n), 200
-
-    return jsonify({"error": "nota non trovata"}), 404
-
+        if n["id"] == data["id"]:
+            n["body"] = data["body"]
+    save_notes(notes)
+    return jsonify(notes), 201
 
 if __name__ == "__main__":
     app.run(debug=True)
